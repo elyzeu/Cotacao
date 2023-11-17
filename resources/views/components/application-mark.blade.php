@@ -1,0 +1,1 @@
+<img src="{{ asset('images/netsidem.png') }}" style="width:80%; heigth: auto;" />
