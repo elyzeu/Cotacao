@@ -17,6 +17,34 @@
             border-radius: 5px;
         }
 
+        .dnthave{
+    color: white;
+}
+.dnthave:hover{
+ color: red;   
+}
+h4 {
+    color: #5c6bc0;
+    font-size: 3em;
+    margin-top: 0px;
+    text-align: left;
+    font-weight: lighter;
+    border-bottom: 2px solid #5c6bc0;
+    margin-bottom: 60px;
+}
+h4 {
+    text-shadow: 4px 8px 12px rgba(0, 0, 0, 1);
+}
+h5{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  color: #a1a4ad;
+  letter-spacing: 1.5px;
+  margin-top: -50px;
+  margin-bottom: 40px;
+
+}
+
     </style>
    
          
@@ -27,9 +55,10 @@
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
-.
-        <x-validation-errors class="mb-4" />
 
+        <x-validation-errors class="mb-4" />
+        <h4>Registrar</h4>
+        <h5>Crie sua conta.</h5>
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -94,7 +123,7 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm  text-white hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                <a class="underline text-sm  text-white dnthave rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>

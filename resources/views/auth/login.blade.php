@@ -14,10 +14,37 @@
         .btnred:hover{
             background-color: #800f14;
         }
+        .dnthave{
+    color: white;
+}
+.dnthave:hover{
+ color: red;   
+}
+h4 {
+    color: #5c6bc0;
+    font-size: 3em;
+    margin-top: 0px;
+    text-align: left;
+    font-weight: lighter;
+    border-bottom: 2px solid #5c6bc0;
+    margin-bottom: 60px;
+}
+h4 {
+    text-shadow: 4px 8px 12px rgba(0, 0, 0, 1);
+}
+h5{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  color: #a1a4ad;
+  letter-spacing: 1.5px;
+  margin-top: -50px;
+  margin-bottom: 40px;
+
+}
         
     </style>
     <x-authentication-card>
-        <x-slot name="logo">
+    <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
 
@@ -28,7 +55,9 @@
                 {{ session('status') }}
             </div>
         @endif
-
+        
+        <h4>Login</h4>
+        <h5>Entre com sua conta.</h5>
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -59,7 +88,10 @@
                 <x-button class="ml-4 btnred">
                     {{ __('Log in') }}
                 </x-button>
+               
             </div>
         </form>
+        
+        <a  href="{{ route('register') }}" class="dnthave">Não tem uma conta? Cadastre-se</a> 
     </x-authentication-card>
 </x-guest-layout>
