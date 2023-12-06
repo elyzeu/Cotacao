@@ -169,3 +169,8 @@ Route::get('download-apk', function () {
     ];
     return response()->download($path, 'NETSideCotacao.apk', $headers);
 })->name('download.apk');
+
+// rota de captura pra qualquer outra rota
+Route::any('{any}', function () {
+    return redirect('/');
+})->where('any', '.*');
